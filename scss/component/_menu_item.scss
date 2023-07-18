@@ -1,0 +1,116 @@
+.prd-list {
+
+}
+
+.prd-item {
+  cursor: pointer;
+  margin: 0 10px;
+
+  &.soldout {
+    .prd-img-area {
+      position: relative;
+      &::before {
+        content: 'SOLD OUT';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 25px;
+        color: $white;
+        background-color: rgba(0,0,0,.3);
+      }
+    }
+  }
+
+  .prd-img-area {
+    width: 100%;
+    height: 250px;
+    border: 1px solid $border-color;
+    overflow: hidden;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  .prd-info-area {
+    margin: 15px 0 10px;
+    .prd-category {
+      color: $font-color-sub;
+      font-size: 13px;
+    }
+    .prd-name {
+      font-weight: 500;
+      margin-top: 8px;
+    }
+    .prd-desc {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .prd-price-area {
+    margin-bottom: 5px;
+    .current-price {
+      font-size: 16px;
+      font-weight: 500;
+      span {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .prd-grade-area {
+    margin-bottom: 5px;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .bi-star-fill {
+      color: $yellow;
+    }
+    .rating {
+      margin-right: 10px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 15px;
+        background-color: $border-color;
+      }
+    }
+  }
+
+  .prd-badge-area {
+    .prd-badge {
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      width: 45px;
+      height: 25px;
+      line-height: 25px;
+      font-weight: 600;
+      color: $white;
+    }
+    .new-badge {
+      background-color: $badge01;
+    }
+    .best-badge {
+      background-color: $badge02;
+    }
+    .md-badge {
+      background-color: $badge03;
+    }
+  }
+}

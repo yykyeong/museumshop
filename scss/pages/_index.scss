@@ -1,0 +1,64 @@
+.visual-area {
+  .visual-list {
+
+    .visual-item {
+      position: relative;
+      cursor: pointer;
+      .visual-img {
+        img {
+          width: 100%;
+        }
+        .mhidden {
+          display: none;
+        }
+      }
+
+      .visual-txt {
+        position: absolute;
+        top: 45%;
+        left: 55px;
+        transform: translateY(-50%);
+
+        .sub-txt {
+          color: $sub-color;
+          font-size: 20px;
+          font-weight: 500;
+
+        }
+        .main-txt {
+          color: $main-color;
+          font-size: 50px;
+          font-weight: 700;
+          margin-top: 25px;
+        }
+
+      }
+    }
+  }
+}
+
+.best-area {
+  .common-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title-group {}
+  .best-group {
+    .prd-list {
+      width: calc(250px * 3 + 20px);
+    }
+
+
+    .slick-prev {
+      left: -40px;
+    }
+    .slick-next {
+      right: -40px;
+    }
+
+
+
+  }
+
+}
