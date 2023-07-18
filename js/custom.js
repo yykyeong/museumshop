@@ -11,7 +11,15 @@ $(function () {
     )
   })
 
+/* book_tab */
+$('.tab-list li').click(function(){
+  $(this).addClass('is-active');
+  $(this).siblings().removeClass('is-active')
 
+  let tab = $(this).attr('data-tab')
+  $(".tab-content").removeClass('is-active')
+  $('#'+ tab).addClass('is-active')
+})
 
 
   /* visual */
