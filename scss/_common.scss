@@ -1,0 +1,39 @@
+// reset
+
+html{
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    font-family:$font-default;
+    font-size: 15px;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+      text-decoration: none;
+  }
+}
+
+
+// common
+.common-inner {
+  width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
+}
