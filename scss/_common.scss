@@ -32,7 +32,7 @@ a {
 
 
 // common
-section {
+section:not(.visual-area) {
   padding: 60px 0;
 }
 
@@ -84,6 +84,13 @@ section {
   width: 40px;
   height: 40px;
 }
+.slick-prev {
+  left: -40px;
+}
+.slick-next {
+  right: -40px;
+}
+
 
 .slick-next:before,
 .slick-prev:before {

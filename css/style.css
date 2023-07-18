@@ -32,7 +32,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-section {
+section:not(.visual-area) {
   padding: 60px 0;
 }
 
@@ -78,6 +78,14 @@ section {
   height: 40px;
 }
 
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -40px;
+}
+
 .slick-next:before,
 .slick-prev:before {
   content: "\f285";
@@ -111,9 +119,22 @@ section {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.prd-item.sale .original-price {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+}
+.prd-item.sale .current-price {
+  color: #9E302C;
+}
+.prd-item.sale .descount-rate {
+  color: #9E302C;
+  font-size: 14px;
+  font-weight: 400;
+}
 .prd-item .prd-img-area {
   width: 100%;
-  height: 250px;
   border: 1px solid #DFDFDF;
   overflow: hidden;
 }
@@ -121,6 +142,7 @@ section {
   width: inherit;
   height: inherit;
   object-fit: cover;
+  display: block;
 }
 .prd-item .prd-info-area {
   margin: 15px 0 10px;
@@ -144,7 +166,8 @@ section {
   font-size: 16px;
   font-weight: 500;
 }
-.prd-item .prd-price-area .current-price span {
+.prd-item .prd-price-area .current-price em {
+  font-style: normal;
   font-size: 13px;
   font-weight: 400;
 }
@@ -227,9 +250,63 @@ section {
 .best-area .best-group .prd-list {
   width: 770px;
 }
-.best-area .best-group .slick-prev {
-  left: -40px;
+
+.new-area .title-group {
+  margin-bottom: 20px;
 }
-.best-area .best-group .slick-next {
-  right: -40px;
+
+.deal-area .deal-title {
+  padding: 90px 0 320px;
+  background: url("/images/deal-bg.png") no-repeat center center/cover;
+}
+.deal-area .deal-title .common-inner {
+  transform: translateY(60px);
+}
+.deal-area .deal-title h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.deal-area .deal-title p {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.deal-area .deal-group {
+  margin-top: -220px;
+}
+.deal-area .deal-group .prd-list {
+  display: flex;
+  gap: 10px;
+}
+.deal-area .deal-group .prd-list .prd-item {
+  margin: 0;
+}
+.deal-area .prd-img-area {
+  position: relative;
+}
+.deal-area .deal-countdown {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.deal-area .deal-countdown span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.deal-area .deal-countdown span::before {
+  content: "\f293";
+  font-family: bootstrap-icons;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 25px;
+  vertical-align: top;
 }
