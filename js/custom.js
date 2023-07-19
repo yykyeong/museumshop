@@ -1,25 +1,97 @@
 $(function () {
 
 
+  /* header */
+  const headerArea = $('.header-area');
+  const categoryMenuArea = $('.category-menu-area');
+  const triggerBtn = $('.btn-trigger');
+
+
+  $(window).resize(function () {
+    if ($(window).innerWidth() > 767) {
+      triggerBtn.click(function () {
+        $(this).toggleClass('is-active');
+        headerArea.addClass('is-active');
+        categoryMenuArea.stop().slideToggle(300).toggleClass('is-active');
+      })
+      $('section').click(function(){
+        triggerBtn.removeClass('is-active')
+        categoryMenuArea.stop().slideUp(300);
+      });
+    } 
+    else if ($(window).innerWidth() < 767) {
+      triggerBtn.click(function () {
+        categoryMenuArea.animate({
+          'left': 0
+        }, 300);
+      })
+      $('section, .btn-category-menu-close').click(function () {
+        categoryMenuArea.animate({
+          'left': -300
+        }, 300);
+      })
+    }
+  }).resize();
+
+
+  $(window).scroll(function() {
+    const scrollTop = $(window).scrollTop();
+    if (scrollTop > 180) {
+      headerArea.addClass('is-active');
+    } else {
+      headerArea.removeClass('is-active');
+    }
+  });
+
+
+
+  /* category-list */
+  $('.category-item  b').click(function () {
+    $('.detail-list').slideUp(200);
+    $(this).next().stop().slideDown(200);
+    $(this).addClass('is-active');
+    $(this).parent().siblings().children('b').removeClass('is-active');
+  })
+
+
+
+  /* search */
+  const searchEl = $('.search-btn');
+  const searchInputEl = searchEl.find('input');
+
+  searchEl.click(function () {
+    $(this).addClass('is-active');
+    searchInputEl.focus();
+  })
+
+  $(searchInputEl).on('focus', function () {
+    searchInputEl.attr('placeholder', '통합검색');
+  });
+
+  $(searchInputEl).on('blur', function () {
+    searchEl.removeClass('is-active');
+    searchInputEl.attr('placeholder', '');
+  });
+
 
 
   /* deal_countdown  */
   $(".deal-countdown")
-  .countdown("2023/12/25", function(event){
-    $(this).html(
-      event.strftime('<span>%DDAY</span> %H : %M : %S')
-    )
+    .countdown("2023/12/25", function (event) {
+      $(this).html(
+        event.strftime('<span>%DDAY</span> %H : %M : %S')
+      )
+    })
+
+  /* book_tab */
+  $('.tab-list li').click(function () {
+    $(this).addClass('is-active');
+    $(this).siblings().removeClass('is-active')
+
+    let tab = $(this).attr('data-tab')
+    $(".tab-content").removeClass('is-active')
+    $('#' + tab).addClass('is-active')
   })
-
-/* book_tab */
-$('.tab-list li').click(function(){
-  $(this).addClass('is-active');
-  $(this).siblings().removeClass('is-active')
-
-  let tab = $(this).attr('data-tab')
-  $(".tab-content").removeClass('is-active')
-  $('#'+ tab).addClass('is-active')
-})
 
 
   /* visual */
@@ -51,7 +123,6 @@ $('.tab-list li').click(function(){
           slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
           arrows: false
         }
       },
@@ -84,7 +155,6 @@ $('.tab-list li').click(function(){
           slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
           arrows: false
         }
       },

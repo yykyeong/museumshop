@@ -1,0 +1,246 @@
+.header-area {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.20);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  &.is-active {
+    // position: fixed;
+    background-color: $white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+
+    .logo-login-group {
+      .logo {
+        img {
+          filter: none;
+        }
+      }
+
+      .login-register-btn {
+        button {
+          &.btn-login {
+            border-color: $border-color;
+          }
+        }
+      }
+    }
+
+    .gnb-group {
+      .gnb-list {
+        a {
+          color: $font-color-main;
+        }
+      }
+      .gnb-btn {
+        svg {
+          fill: $main-color;
+        }
+      }
+    }
+  }
+
+
+  .logo-login-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+
+
+    .logo {
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    .login-register-btn {
+      button {
+        border: 1px solid $transparent;
+        border-radius: 5px;
+        padding: 5px 15px;
+        color: $font-color-main;
+
+        &.btn-login {
+          background-color: $white;
+          margin-right: 5px;
+        }
+
+        &.btn-register {
+          background-color: $main-color;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .gnb-group {
+    display: flex;
+    justify-content: space-between;
+
+    .gnb-list {
+      flex: 1;
+      display: flex;
+      line-height: 50px;
+
+      .btn-trigger {
+        display: flex;
+        align-items: center;
+
+        &.is-active {
+          color: $main-color;
+          font-weight: 600;
+        }
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        padding: 0px 50px;
+        color: $white;
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:hover {
+          color: $main-color;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .gnb-btn {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      li {
+        cursor: pointer;
+      }
+
+      .search-btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        &.is-active {
+          input {
+            border: 1px solid $border-color;
+            & + svg {
+              display: none;
+            }
+          }
+          &::after {
+            content: '\F52A';
+            font-family: $bs-icon;
+            font-size: 20px;
+            position: absolute;
+            right: 4px;
+            color: $main-color;
+          }
+        }
+
+        input {
+          border: none;
+          outline: none;
+          font-size: 12px;
+          background-color: transparent;
+          width: 30px;
+          height: 30px;
+          transition: width .4s;
+          position: relative;
+
+          &:focus {
+            width: 200px;
+            background-color: $white;
+            padding: 4px 30px 4px 10px;
+          }
+        }
+        svg {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .cart-btn {
+        position: relative;
+        em {
+          position: absolute;
+          width: 17px;
+          height: 17px;
+          background-color: $main-color;
+          border-radius: 50%;
+          right: -5px;
+          top: -2px;
+        }
+        ::before {
+          content: attr(data-count);
+          color: $white;
+          font-size: 11px;
+          display: flex;
+          font-style: normal;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+// 카테고리 메뉴
+  .category-menu-area {
+
+    &.is-active {
+      display: block;
+    }
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: $white;
+
+    .category-list {
+      width: 1160px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .category-item {
+        width: 20%;
+        border: 1px solid $border-color;
+        border-width: 0 0 1px 1px;
+        text-align: center;
+        padding-bottom: 10px;
+        &:nth-child(5),
+        &:last-child {
+          border-right: 1px solid $border-color;
+        }
+
+        b {
+          color: $main-color;
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+
+      .detail-list {
+        margin-top: 7px;
+        a {
+          display: block;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+  }
+
+  .btn-category-menu-close {
+    display: none;
+  }
+}
