@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품상세</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- The Final Countdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+  <!--Google Material Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- custom css & js -->
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/custom.js"></script>
+</head>
+
+<body>
+  <div class="container prd-detail">
+    <!-- header -->
+    <header class="header-area is-active">
+      <div class="common-inner">
+        <!-- login -->
+        <div class="logo-login-group">
+          <a href="/indexl.html" class="logo"><img src="/images/logo.png" alt=""></a>
+          <div class="login-register-btn">
+            <button class="btn-login">로그인</button>
+            <button class="btn-register">회원가입</button>
+          </div>
+        </div>
+
+        <!-- gnb -->
+        <div class="gnb-group">
+          <nav class="gnb-list">
+            <a class="btn-trigger" href="#none">
+              <span class="material-icons">menu</span>카테고리</a>
+            <a href="#none">신상품</a>
+            <a href="#none">베스트</a>
+            <a href="#none">이벤트·기획전</a>
+            <a href="#none">기업특판</a>
+          </nav>
+          <ul class="gnb-btn">
+            <li class="search-btn">
+              <input type="text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </li>
+            <li class="cart-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-cart2"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+              </svg>
+              <em data-count="2"></em>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- category-menu -->
+      <div class="category-menu-area">
+
+        <div class="search-mobile">
+          <input type="text" placeholder="통합검색">
+        </div>
+        <div class="category-list">
+          <div class="category-item">
+            <b>문구/사무</b>
+            <ul class="detail-list">
+              <li><a href="#none">노트/수첩/메모</a></li>
+              <li><a href="#none">필기류/필통</a></li>
+              <li><a href="#none">엽서/봉투</a></li>
+              <li><a href="#none">명함집</a></li>
+              <li><a href="#none">자석/책갈피</a></li>
+              <li><a href="#none">스티커/테이프</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>패션/생활 용품</b>
+            <ul class="detail-list">
+              <li><a href="#none">손수건/스카프</a></li>
+              <li><a href="#none">가방/지갑/파우치</a></li>
+              <li><a href="#none">의류</a></li>
+              <li><a href="#none">전통부채</a></li>
+              <li><a href="#none">우산/양산</a></li>
+              <li><a href="#none">액세서리</a></li>
+              <li><a href="#none">거울</a></li>
+              <li><a href="#none">배지/키링</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>인테리어 소품</b>
+            <ul class="detail-list">
+              <li><a href="#none">미니어처</a></li>
+              <li><a href="#none">인센스/방향제/캔들</a></li>
+              <li><a href="#none">무드등/조명</a></li>
+              <li><a href="#none">아트프린트</a></li>
+              <li><a href="#none">쿠션/패브릭</a></li>
+              <li><a href="#none">장식소품</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>주방/식기</b>
+            <ul class="detail-list">
+              <li><a href="#none">컵/텀블러</a></li>
+              <li><a href="#none">접시/그릇</a></li>
+              <li><a href="#none">수저</a></li>
+              <li><a href="#none">쟁반/소반</a></li>
+              <li><a href="#none">코스터</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>디지털/모바일</b>
+            <ul class="detail-list">
+              <li><a href="#none">모바일 액세서리</a></li>
+              <li><a href="#none">충전기</a></li>
+              <li><a href="#none">스마트톡</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>취미/완구</b>
+            <ul class="detail-list">
+              <li><a href="#none">DIY/만들기</a></li>
+              <li><a href="#none">놀이/장난감</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>도서</b>
+            <ul class="detail-list">
+              <li><a href="#none">상설전시도록</a></li>
+              <li><a href="#none">특별전시도록</a></li>
+              <li><a href="#none">어린이 도서</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>공예품</b>
+            <ul class="detail-list">
+              <li><a href="#none">나전</a></li>
+              <li><a href="#none">도자기</a></li>
+              <li><a href="#none">금속</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>박물관특화상품</b>
+            <ul class="detail-list">
+              <li><a href="#none">국립중앙박물관</a></li>
+              <li><a href="#none">국립경주박물관</a></li>
+              <li><a href="#none">국립광주박물관</a></li>
+              <li><a href="#none">국립대구박물관</a></li>
+              <li><a href="#none">국립진주박물관</a></li>
+              <li><a href="#none">국립제주박물관</a></li>
+              <li><a href="#none">국립익산박물관</a></li>
+              <li><a href="#none">국립민속박물관</a></li>
+              <li><a href="#none">국립한글박물관</a></li>
+              <li><a href="#none">국립전주박물관</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>세일</b>
+          </div>
+        </div>
+        <button class="btn-category-menu-close">&times;</button>
+      </div>
+    </header>
+
+    <section class="prd-detail-area page-layout">
+      <div class="common-inner">
+        <div class="page-layout-content">
+          <!-- left -->
+          <div class="prd-info-area left-box">
+            <!-- nav -->
+            <ul class="prd-info-navigation">
+              <li><a href="#info1" class="is-active">제품소개</a></li>
+              <li><a href="#info2">상품리뷰(99개)</a></li>
+              <li><a href="#info3">상품문의</a></li>
+              <li><a href="#info4">배송/환불</a></li>
+              <li><a href="#info5">뮷즈가방</a></li>
+            </ul>
+            <!-- 제품소개 -->
+            <article class="prd-desc-group" id="info1">
+              <h2 class="info-header">제품소개</h2>
+              <div class="prd-desc-content">
+                <div class="prd-img">
+                  <img src="/images/prd_detail.jpg" alt="prd-name">
+                </div>
+                <div class="prd-desc">
+                  <dl>
+                    <dt>상품크기</dt>
+                    <dd>16x17x4cm</dd>
+                  </dl>
+                  <dl>
+                    <dt>케이스크기</dt>
+                    <dd>17x17x4.5cm</dd>
+                  </dl>
+                  <dl>
+                    <dt>상품구성</dt>
+                    <dd>상품 1개, 패키지 1개</dd>
+                  </dl>
+                  <dl>
+                    <dt>상품소재</dt>
+                    <dd>겉감: 폴리에스터 98.6%, 폴리우레탄 1.4%<br>
+                      안감: 폴리에스터 100%</dd>
+                  </dl>
+                </div>
+              </div>
+            </article>
+            <!-- 상품리뷰 -->
+            <article class="prd-review-group" id="info2">
+              <h2 class="info-header">상품리뷰</h2>
+              <a href="#none" class="write-btn">리뷰작성</a>
+              <div class="prd-review-content">
+                <div class="review-stars-group">
+                  <b class="rating">4.9</b>
+                  <span class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+
+                  </span>
+                </div>
+                <div class="review-diagram-group">
+                  <div class="review-diagram">
+                    <b>5점</b>
+                    <div class="review-diagram-bar">
+                      <span class="review-diagram-bar-progress" style="width: 90%"></span>
+                    </div>
+                  </div>
+                  <div class="review-diagram">
+                    <b>4점</b>
+                    <div class="review-diagram-bar">
+                      <span class="review-diagram-bar-progress" style="width: 80%"></span>
+                    </div>
+                  </div>
+                  <div class="review-diagram">
+                    <b>3점</b>
+                    <div class="review-diagram-bar">
+                      <span class="review-diagram-bar-progress" style="width: 20%"></span>
+                    </div>
+                  </div>
+                  <div class="review-diagram">
+                    <b>2점</b>
+                    <div class="review-diagram-bar">
+                      <span class="review-diagram-bar-progress" style="width: 10%"></span>
+                    </div>
+                  </div>
+                  <div class="review-diagram">
+                    <b>1점</b>
+                    <div class="review-diagram-bar">
+                      <span class="review-diagram-bar-progress"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="user-riview-list">
+                <div class="user-review-item">
+                  <div class="user-img">
+                    <img src="/images/review01.jpg" alt="user-img">
+                  </div>
+                  <div class="user-comment">
+                    <div class="user-info">
+                      <div class="user-star-prd">
+                        <span class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </span>
+                        <span class="prd-info">신라의 미소 파우치&#40;남색&#41;</span>
+                      </div>
+                      <div class="user-name-date">
+                        <span class="user-name">윤**</span>
+                        <span class="write-date">2023-12-25</span>
+                      </div>
+                    </div>
+                    <p>
+                      좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!좋아요!
+                    </p>
+                  </div>
+                </div>
+                <div class="user-review-item">
+                  <div class="user-img">
+                    <img src="/images/review02.jpg" alt="user-img">
+                  </div>
+                  <div class="user-comment">
+                    <div class="user-info">
+                      <div class="user-star-prd">
+                        <span class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star"></i>
+                        </span>
+                        <span class="prd-info">신라의 미소 파우치&#40;미색&#41;</span>
+                      </div>
+                      <div class="user-name-date">
+                        <span class="user-name">영**</span>
+                        <span class="write-date">2023-12-24</span>
+                      </div>
+                    </div>
+                    <p>
+                      ^~^
+                    </p>
+                  </div>
+                </div>
+                <div class="user-review-item">
+                  <div class="user-img">
+                    <img src="/images/review03.jpg" alt="user-img">
+                  </div>
+                  <div class="user-comment">
+                    <div class="user-info">
+                      <div class="user-star-prd">
+                        <span class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star"></i>
+                          <i class="bi bi-star"></i>
+                        </span>
+                        <span class="prd-info">신라의 미소 파우치&#40;남색&#41;</span>
+                      </div>
+                      <div class="user-name-date">
+                        <span class="user-name">경**</span>
+                        <span class="write-date">2023-12-12</span>
+                      </div>
+                    </div>
+                    <p>
+                      흠
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a href="#none" class="more-btn">더 보기</a>
+            </article>
+            <!-- 상품문의 -->
+            <article class="prd-inquiry-group" id="info3">
+              <h2 class="info-header">상품문의</h2>
+              <a href="#none" class="write-btn">문의하기</a>
+              <div class="prd-inquiry-content">
+                <div class="user-inquiry-list">
+                  <div class="user-inquiry-item">
+                    <div class="inquiry-title">배송 조회 문의</div>
+                    <div class="user-name-date">
+                      <span class="user-name">신**</span>
+                      <span class="write-date">2023-12-12</span>
+                    </div>
+                    <div class="answer-status">답변 대기</div>
+                  </div>
+                  <div class="user-inquiry-item">
+                    <div class="inquiry-title">재입고 문의</div>
+                    <div class="user-name-date">
+                      <span class="user-name">라**</span>
+                      <span class="write-date">2023-02-02</span>
+                    </div>
+                    <div class="answer-status answer-complete">답변 완료</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- 배송/환불 -->
+            <article class="prd-refund-group" id="info4">
+              <h2 class="info-header">배송/환불</h2>
+              <div class="prd-refund-content">
+                <div class="refund-title">배송안내</div>
+                <ul class="refund-desc">
+                  <li>
+                    도서와 일반상품은 합배송이 불가하여 배송비가 각각 결제 됩니다.&#40;도서소득공제 적용으로 배송비 합산 불가&#41;
+                  </li>
+                  <li>3만원 이상 주문 시 무료배송, 3만원 미만은 3,000원의 배송비가 추가됩니다.</li>
+                  <li>20개 이상의 다량 구매시 재고사항 및 출고일정을 문의해주시기 바랍니다.</li>
+
+                </ul>
+              </div>
+              <div class="prd-refund-content">
+                <div class="refund-title">교환/환불/AS안내</div>
+                <ul class="refund-desc">
+                  <li>상품 수령일로부터 7일 이내 반품/교환이 가능합니다.</li>
+                  <li>
+                    변심 반품의 경우 왕복배송비를 차감한 금액이 환불 되며, 제품 및 포장 상태가 재판매 가능 하여야 합니다.
+                  </li>
+                  <li>상품이 불량인 경우, 배송비를 포함한 전액이 환불됩니다.</li>
+                  <li>출고 이후 환불요청시 상품 회수 후 처리됩니다.</li>
+                  <li>밀봉포장, 만들기상품 등은 변심에 따른 반품/환불이 불가합니다.</li>
+                </ul>
+              </div>
+            </article>
+            <!-- 뮷즈가방 -->
+            <article class="prd-mudsbag-group" id="info5">
+              <h2 class="info-header">뮷즈가방</h2>
+              <div class="prd-mudsbag-content">
+                <div class="bag-item">
+                  <div class="bag-img"><img src="/images/mudsbag01.jpg" alt="뮷즈 선물 가방_부직포"></div>
+                  <div class="bag-desc">
+                    뮷즈 선물 가방&#40;부직포&#41; <br>
+                    &#40;30*36cm&#41;
+                  </div>
+                </div>
+                <div class="bag-item">
+                  <div class="bag-img"><img src="/images/mudsbag02.jpg" alt="뮷즈 선물 가방_천"></div>
+                  <div class="bag-desc">
+                    뮷즈 선물 가방&#40;천&#41;<br>
+                    &#40;36*33cm, 색상랜덤&#41;
+                  </div>
+                </div>
+            </article>
+          </div>
+
+          <!-- right -->
+          <div class="prd-option-area right-box">
+            <div class="option-wrap option-title">
+              <div class="hashtag-group">#수막새 #신라 #경주</div>
+              <div class="prd-item">
+                <div class="prd-badge-area">
+                  <span class="prd-badge new-badge">NEW</span>
+                  <span class="prd-badge best-badge">BEST</span>
+                </div>
+                <div class="prd-info-area">
+                  <p class="prd-name">신라의 미소 파우치</p>
+                  <p class="prd-desc">국립경주박물관 특화상품</p>
+                </div>
+                <div class="prd-price-area">
+                  <span class="current-price">23,000<em>원</em></span>
+                </div>
+                <div class="prd-grade-area">
+                  <span class="bi bi-star-fill"></span>
+                  <span class="rating">4.9</span>
+                  <span class="riview">리뷰 99</span>
+                </div>
+              </div>
+              <div class="share-group">
+                <button class="fav-btn"><i class="bi bi-heart"></i></button>
+                <button class="share-btn"><i class="bi bi-share"></i></button>
+              </div>
+            </div>
+            <div class="option-wrap option-group">
+              <select name="color" class="color-select">
+                <option value="">선택옵션</option>
+                <option value="rice" selected>미색</option>
+                <option value="navy">남색</option>
+              </select>
+              <select name="bag">
+                <option value="">뮷즈가방</option>
+                <option value="nobag">선택안함(+0원)</option>
+                <option value="bag01" selected>뮷즈 선물 가방(부직포, 30x36cm)(+2000원)</option>
+                <option value="bag02">뮷즈 선물 가방(천, 36x33cm)(+4000원)</option>
+              </select>
+              <div class="select-area">
+                <ul>
+                  <li>미색</li>
+                  <li>뮷즈 선물 가방(부직포, 30x36cm)(+2000원)</li>
+                </ul>
+                <div class="amount-select">
+                  <button class="btn-minus"><span class="material-icons">remove</span></button>
+                  <span class="amount">1</span>
+                  <button class="btn-minus"><span class="material-icons">add</span></button>
+                </div>
+                <button class="cancel-btn"><span class="material-icons">close</span></button>
+              </div>
+              <div class="total-price">
+                <p>주문금액</p>
+                <span>25000원</span>
+              </div>
+            </div>
+            <div class="option-wrap option-action">
+              <button class="btn-common btn-cart">장바구니</button>
+              <button class="btn-common btn-buy">바로구매</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer class="footer-area">
+      <div class="common-inner">
+        <div class="lnb-group">
+          <h1 class="title">국립박물관 문화상품</h1>
+          <ul class="lnb-list">
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">오프라인 매장</h3>
+              <div class="lnb-content">
+                <a href="#none">국립중앙박물관</a>
+                <a href="#none">국립경주박물관</a>
+                <a href="#none">국립광주박물관</a>
+                <a href="#none">국립대구박물관</a>
+                <a href="#none">국립진주박물관</a>
+                <a href="#none">국립제주박물관</a>
+                <a href="#none">국립익산박물관</a>
+                <a href="#none">국립민속박물관</a>
+                <a href="#none">국립한글박물관</a>
+                <a href="#none">국립전주박물관</a>
+              </div>
+            </li>
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">고객센터</h3>
+              <div class="lnb-content">
+                <a href="#none">공지사항</a>
+                <a href="#none">이용약관</a>
+                <a href="#none"><span>개인정보처리방침</span></a>
+                <a href="#none">FAQ</a>
+                <a href="#none">환불규정</a>
+              </div>
+            </li>
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">CONTACT</h3>
+              <div class="lnb-content">
+                <p>온라인숍 문의 : 02-2077-2943/2946 | museumshop@nmf.or.kr</p>
+                <p>문화누리 주문 : 02-2077-2957</p>
+                <p>기업특판 문의 : 02-2077-9727/2945 | b2b@nmf.or.kr</p>
+                <p class="time">주중 10시 ~ 16시 ( 주말 및 공휴일 휴무)<br>
+                  점심시간 12시 ~ 13시</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright-group">
+          <b class="title">국립박물관문화재단 정보</b>
+          <address>
+            <p>
+              국립막물관문화재단 대표자 : 김용삼<br>
+              사업자 등록번호 106-82-12358 | 통신판매업 신고번호 2008-서울용산-00336<br>
+              서울특별시 용산구 서빙고로 137
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- 공유하기 -->
+  <div class="share-area">
+    <h2>공유하기</h2>
+    <div class="share-list">
+      <div class="share-item">
+        <i class="bi bi-facebook"></i><span>페이스북</span>
+      </div>
+      <div class="share-item">
+        <i class="bi bi-twitter"></i><span>트위터</span>
+      </div>
+      <div class="share-item">
+        <i class="bi bi-chat-fill"></i><span>카카오톡</span>
+      </div>
+      <div class="share-item share-link">
+        <i class="bi bi-link"></i><span>링크 복사</span>
+        <div class="copied-link">주소가 복사되었습니다</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+
+</html>

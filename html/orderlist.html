@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장바구니</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- The Final Countdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+  <!--Google Material Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- custom css & js -->
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/custom.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- header -->
+    <header class="header-area">
+      <div class="common-inner">
+        <!-- login -->
+        <div class="logo-login-group">
+          <a href="/indexl.html" class="logo"><img src="/images/logo.png" alt=""></a>
+          <div class="login-register-btn">
+            <button class="btn-login">로그인</button>
+            <button class="btn-register">회원가입</button>
+          </div>
+        </div>
+
+        <!-- gnb -->
+        <div class="gnb-group">
+          <nav class="gnb-list">
+            <a class="btn-trigger" href="#none">
+              <span class="material-icons">menu</span>카테고리</a>
+            <a href="#none">신상품</a>
+            <a href="#none">베스트</a>
+            <a href="#none">이벤트·기획전</a>
+            <a href="#none">기업특판</a>
+          </nav>
+          <ul class="gnb-btn">
+            <li class="search-btn">
+              <input type="text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </li>
+            <li class="cart-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-cart2"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+              </svg>
+              <em data-count="2"></em>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- category-menu -->
+      <div class="category-menu-area">
+
+        <div class="search-mobile">
+          <input type="text" placeholder="통합검색">
+        </div>
+        <div class="category-list">
+          <div class="category-item">
+            <b>문구/사무</b>
+            <ul class="detail-list">
+              <li><a href="#none">노트/수첩/메모</a></li>
+              <li><a href="#none">필기류/필통</a></li>
+              <li><a href="#none">엽서/봉투</a></li>
+              <li><a href="#none">명함집</a></li>
+              <li><a href="#none">자석/책갈피</a></li>
+              <li><a href="#none">스티커/테이프</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>패션/생활 용품</b>
+            <ul class="detail-list">
+              <li><a href="#none">손수건/스카프</a></li>
+              <li><a href="#none">가방/지갑/파우치</a></li>
+              <li><a href="#none">의류</a></li>
+              <li><a href="#none">전통부채</a></li>
+              <li><a href="#none">우산/양산</a></li>
+              <li><a href="#none">액세서리</a></li>
+              <li><a href="#none">거울</a></li>
+              <li><a href="#none">배지/키링</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>인테리어 소품</b>
+            <ul class="detail-list">
+              <li><a href="#none">미니어처</a></li>
+              <li><a href="#none">인센스/방향제/캔들</a></li>
+              <li><a href="#none">무드등/조명</a></li>
+              <li><a href="#none">아트프린트</a></li>
+              <li><a href="#none">쿠션/패브릭</a></li>
+              <li><a href="#none">장식소품</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>주방/식기</b>
+            <ul class="detail-list">
+              <li><a href="#none">컵/텀블러</a></li>
+              <li><a href="#none">접시/그릇</a></li>
+              <li><a href="#none">수저</a></li>
+              <li><a href="#none">쟁반/소반</a></li>
+              <li><a href="#none">코스터</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>디지털/모바일</b>
+            <ul class="detail-list">
+              <li><a href="#none">모바일 액세서리</a></li>
+              <li><a href="#none">충전기</a></li>
+              <li><a href="#none">스마트톡</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>취미/완구</b>
+            <ul class="detail-list">
+              <li><a href="#none">DIY/만들기</a></li>
+              <li><a href="#none">놀이/장난감</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>도서</b>
+            <ul class="detail-list">
+              <li><a href="#none">상설전시도록</a></li>
+              <li><a href="#none">특별전시도록</a></li>
+              <li><a href="#none">어린이 도서</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>공예품</b>
+            <ul class="detail-list">
+              <li><a href="#none">나전</a></li>
+              <li><a href="#none">도자기</a></li>
+              <li><a href="#none">금속</a></li>
+              <li><a href="#none">기타</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>박물관특화상품</b>
+            <ul class="detail-list">
+              <li><a href="#none">국립중앙박물관</a></li>
+              <li><a href="#none">국립경주박물관</a></li>
+              <li><a href="#none">국립광주박물관</a></li>
+              <li><a href="#none">국립대구박물관</a></li>
+              <li><a href="#none">국립진주박물관</a></li>
+              <li><a href="#none">국립제주박물관</a></li>
+              <li><a href="#none">국립익산박물관</a></li>
+              <li><a href="#none">국립민속박물관</a></li>
+              <li><a href="#none">국립한글박물관</a></li>
+              <li><a href="#none">국립전주박물관</a></li>
+            </ul>
+          </div>
+          <div class="category-item">
+            <b>세일</b>
+          </div>
+        </div>
+        <button class="btn-category-menu-close">&times;</button>
+      </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <!-- <footer class="footer-area">
+      <div class="common-inner">
+        <div class="lnb-group">
+          <h1 class="title">국립박물관 문화상품</h1>
+          <ul class="lnb-list">
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">오프라인 매장</h3>
+              <div class="lnb-content">
+                <a href="#none">국립중앙박물관</a>
+                <a href="#none">국립경주박물관</a>
+                <a href="#none">국립광주박물관</a>
+                <a href="#none">국립대구박물관</a>
+                <a href="#none">국립진주박물관</a>
+                <a href="#none">국립제주박물관</a>
+                <a href="#none">국립익산박물관</a>
+                <a href="#none">국립민속박물관</a>
+                <a href="#none">국립한글박물관</a>
+                <a href="#none">국립전주박물관</a>
+              </div>
+            </li>
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">고객센터</h3>
+              <div class="lnb-content">
+                <a href="#none">공지사항</a>
+                <a href="#none">이용약관</a>
+                <a href="#none"><span>개인정보처리방침</span></a>
+                <a href="#none">FAQ</a>
+                <a href="#none">환불규정</a>
+              </div>
+            </li>
+            <li class="lnb-item">
+              <h3 class="lnb-item-title">CONTACT</h3>
+              <div class="lnb-content">
+                <p>온라인숍 문의 : 02-2077-2943/2946 | museumshop@nmf.or.kr</p>
+                <p>문화누리 주문 : 02-2077-2957</p>
+                <p>기업특판 문의 : 02-2077-9727/2945 | b2b@nmf.or.kr</p>
+                <p class="time">주중 10시 ~ 16시 ( 주말 및 공휴일 휴무)<br>
+                  점심시간 12시 ~ 13시</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright-group">
+          <b class="title">국립박물관문화재단 정보</b>
+          <address>
+            <p>
+              국립막물관문화재단 대표자 : 김용삼<br>
+              사업자 등록번호 106-82-12358 | 통신판매업 신고번호 2008-서울용산-00336<br>
+              서울특별시 용산구 서빙고로 137
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer> -->
+
+
+
+
+  </div>
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,88 @@
+.share-area {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: $white;
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0,0, rgba(0,0,0,.09);
+  z-index: 101;
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .share-list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .share-item {
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    .bi {
+      display: block;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5em;
+      line-height: 42px;
+      border-radius: 3px;
+      color: $white;
+    }
+    span {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    &.share-link {
+      position: relative;
+      .copied-link {
+        display: none;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        background-color: $font-color-main;
+        color: $white;
+        white-space: nowrap;
+        padding: 4px 7px;
+        border-radius: 3px;
+        &::after {
+          content: '';
+          width: 5px;
+          height: 5px;
+          background-color: $font-color-main;
+          display: inline-block;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%,-50%) rotate(45deg);
+        }
+      }
+    }
+    &:nth-child(1) .bi {
+      background: #385998;
+    }
+    &:nth-child(2) .bi {
+      background: #55acee;
+    }
+    &:nth-child(3) .bi {
+      background: #ffe812;
+      color: $font-color-main;
+    }
+    &:nth-child(4) .bi {
+      background: #e8e8e8;
+      color: $font-color-main;
+      font-size: 2em;
+    }
+  }
+}

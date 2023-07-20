@@ -238,10 +238,28 @@
 
     }
   }
+
+
+  /* ####################### prd_detail.html  ########################## */
+  section.page-layout {
+    padding: 35px 15px;
+  }
+  .page-layout {
+
+    .page-layout-content {
+      flex-direction: column-reverse;
+    }
+
+    .right-box {
+      position: static;
+    }
+  }
+
+
+
 }
 
 @media (max-width: 767px) {
-
   /* header */
   .header-area {
     width: 100%;
@@ -596,4 +614,98 @@
       }
     }
   }
+
+
+  /* ##########prd_detail.html################## */
+  .page-layout {
+    .page-layout-content {
+      > div {
+        box-shadow: none;
+        padding: 10px;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .prd-detail-area {
+    .prd-info-area {
+      .write-btn {
+        width: 75px;
+        padding: 5px;
+      }
+      .prd-info-navigation {
+        gap: 10px;
+        overflow-y: hidden;
+        a {
+          font-size: 14px;
+          white-space: nowrap;
+        }
+      }
+      .prd-desc-group {
+        .prd-desc-content {
+          flex-direction: column;
+        }
+      }
+  
+      .prd-review-group {
+        .prd-review-content {
+          flex-direction: column;
+          .review-stars-group {
+            flex-direction: column;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $border-color;
+          }
+        }
+        .user-review-item {
+          .user-comment {
+            .user-info {
+              flex-direction: column;
+              .user-star-prd {
+                .prd-info {
+                  margin-left: 0px;
+                  display: block;
+                }
+              }
+            }
+            p {
+              margin-top: 10px;
+              @include multi-ellipsis(14px, 19px, 1); 
+            }
+          }
+        }
+      }
+
+      .prd-inquiry-group {
+        .user-inquiry-item {
+          gap: 15px;
+          padding: 17px 0;
+          .inquiry-title {
+            @include ellipsis;
+          }
+
+        }
+  
+      }
+
+      .prd-mudsbag-group {
+        .prd-mudsbag-content {
+          display: flex;
+          justify-content: space-between;
+          > div {
+            flex: 1;
+          }
+        }
+        .bag-item {
+          .bag-img {
+            width: 120px;
+          }
+          .bag-desc {
+            font-size: 10px;
+          }
+        }
+      }
+    } 
+  }
+
   }
