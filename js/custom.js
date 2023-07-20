@@ -93,6 +93,21 @@ $(function () {
     $('#' + tab).addClass('is-active')
   })
 
+  /* footer */
+
+
+  $('.lnb-item-title').click(function(){
+    $(this).next().stop().slideToggle(200);
+    $(this).toggleClass('is-active');
+  })
+
+
+
+  $('.copyright-group .title').click(function(){
+    $('address').toggle();
+  })
+
+
 
   /* visual */
   $('.visual-list').slick({
@@ -116,7 +131,6 @@ $(function () {
     arrows: true,
     dots: false,
 
-
     responsive: [{
         breakpoint: 1024,
         settings: {
@@ -131,7 +145,6 @@ $(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          dots: false,
           arrows: false
         }
       }
@@ -148,7 +161,6 @@ $(function () {
     arrows: true,
     dots: false,
 
-
     responsive: [{
         breakpoint: 1024,
         settings: {
@@ -163,7 +175,6 @@ $(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          dots: false,
           arrows: false
         }
       }
