@@ -136,6 +136,22 @@ $(function () {
     })
   })
 
+  /* 약관동의 */
+  $('.agreement-item').click(function(){
+    $(this).toggleClass('is-open')
+  })
+
+  /* 회원가입_비밀번호 */
+  $('.toggle-pw').click(function(){
+    $(this).toggleClass('bi-eye');
+    const inputType =$(this).parent().children('input').attr('type');
+    if(inputType == 'password') {
+      $(this).parent().children('input').attr('type','text');
+    } else {
+      $(this).parent().children('input').attr('type','password');
+    }
+  })
+
   /* visual */
   $('.visual-list').slick({
     infinite: true,

@@ -28,6 +28,15 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+
 section:not(.visual-area) {
   padding: 60px 0;
 }
@@ -1529,9 +1538,158 @@ section:not(.visual-area) {
   color: #fff;
 }
 
+.register-area {
+  margin-top: 133px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-area .register-content {
+  width: 360px;
+}
+
+.register-title-group {
+  text-align: center;
+}
+.register-title-group .register-slogan {
+  font-weight: bold;
+  font-size: 20px;
+}
+.register-title-group img {
+  margin: 20px 0;
+  width: 150px;
+}
+
+.agreement-group {
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  padding: 0 10px;
+}
+.agreement-group .title {
+  padding-top: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+}
+.agreement-group .agreement-list {
+  margin-top: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.agreement-group .agreement-item:not(:first-child) {
+  border-top: 1px solid #DFDFDF;
+}
+.agreement-group .agreement-item.is-open .agreement-content {
+  display: block;
+}
+.agreement-group .agreement-item.is-open .btn-toggle {
+  transform: rotate(180deg);
+}
+.agreement-group .agreement-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  height: 44px;
+  background-color: #fff;
+}
+.agreement-group .agreement-title .txt {
+  font-weight: 400;
+}
+.agreement-group .agreement-title .btn-toggle {
+  width: 44px;
+  height: 100%;
+}
+.agreement-group .agreement-content {
+  display: none;
+  padding: 10px;
+  max-height: 100px;
+  border-top: 1px solid #DFDFDF;
+  background-color: #F6F7FB;
+  font-size: 13px;
+  overflow-y: auto;
+}
+.agreement-group .agreement-info-txt {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.45px;
+  color: #666;
+}
+.agreement-group .agreement-info-txt input[type=checkbox] {
+  display: none;
+}
+.agreement-group .agreement-info-txt input[type=checkbox]:checked + em::before {
+  content: "\f26d";
+}
+.agreement-group .agreement-info-txt em::before {
+  content: "\f584";
+  font-family: bootstrap-icons;
+  font-style: normal;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #275236;
+  transform: translateY(1px);
+  display: inline-block;
+}
+
+.register-field-group div {
+  position: relative;
+  margin: 15px 0;
+}
+.register-field-group div :is(input[type=email], input[type=password], input[type=text]) {
+  border: 1px solid #DFDFDF;
+  width: 100%;
+  padding: 13px;
+  border-radius: 3px;
+  outline: none;
+}
+.register-field-group div :is(input[type=email], input[type=password], input[type=text])::placeholder {
+  color: #666;
+}
+.register-field-group div :is(input[type=email], input[type=password], input[type=text]):focus {
+  border: 1px solid #275236;
+}
+.register-field-group div .bi {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.register-field-group .btn-register {
+  background-color: #275236;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-group {
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid #DFDFDF;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.login-group a {
+  font-size: 13px;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   section:not(.visual-area) {
     padding: 35px 0px;
+  }
+  section.register-area {
+    padding: 35px 15px;
   }
   .common-inner {
     width: 100%;

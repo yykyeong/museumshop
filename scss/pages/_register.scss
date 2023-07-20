@@ -1,0 +1,157 @@
+.register-area {
+  margin-top: $header-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .register-content {
+    width: 360px;
+  }
+}
+
+.register-title-group {
+  text-align: center;
+  .register-slogan {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  img {
+    margin: 20px 0;
+    width: 150px;
+  }
+}
+
+.agreement-group {
+  background-color: $bg-color03;
+  border-radius: 15px;
+  padding: 0 10px;
+  .title {
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .agreement-list {
+    margin-top: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .agreement-item {
+    &:not(:first-child) {
+      border-top: 1px solid $border-color;
+    }
+    &.is-open {
+      .agreement-content {
+        display: block;
+      }
+      .btn-toggle {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .agreement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    height: 44px;
+    background-color: $white;
+    .txt {
+      font-weight: 400;
+    }
+    .btn-toggle {
+      width: 44px;
+      height: 100%;
+    }
+  }
+
+  .agreement-content {
+    display: none;
+    padding: 10px;
+    max-height: 100px;
+    border-top: 1px solid $border-color;
+    background-color: $bg-color01;
+    font-size: 13px;
+    overflow-y: auto;
+  }
+  
+  .agreement-info-txt {
+    cursor: pointer;
+    input[type=checkbox] {
+      display: none;
+      &:checked + em::before {
+        content: '\F26D';
+      }
+    }
+    em::before {
+      content: '\F584';
+      font-family: $bs-icon;
+      font-style: normal;
+      margin-right: 5px;
+      font-size: 12px;
+      color: $main-color;
+      transform: translateY(1px);
+      display: inline-block;
+    }
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -.45px;
+    color: $font-color-sub;
+  }
+}
+
+.register-field-group {
+  div {
+    position: relative;
+    margin: 15px 0;
+
+    :is(input[type=email], input[type=password], input[type=text]) {
+      border: 1px solid $border-color;
+      width: 100%;
+      padding: 13px;
+      border-radius: 3px;
+      outline: none;
+      &::placeholder { 
+        color: $font-color-sub;
+      }
+      &:focus {
+        border: 1px solid $main-color;
+      }
+    }
+    .bi {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  .btn-register {
+    background-color: $main-color;
+    color: $white;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.login-group {
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid $border-color;
+  margin-top: 10px;
+  padding-top: 10px;
+  a {
+    font-size: 13px;
+    text-decoration: underline;
+  }
+}

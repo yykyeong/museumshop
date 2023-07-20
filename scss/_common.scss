@@ -26,6 +26,15 @@ a {
   }
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &:disabled {
+      cursor: not-allowed;
+  }
+}
+
 // common
 section:not(.visual-area) {
   padding: 60px 0;
