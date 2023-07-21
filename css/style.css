@@ -2262,13 +2262,15 @@ section:not(.visual-area) {
     overflow-x: hidden;
   }
   .best-area .best-group .prd-list {
-    width: 550px;
+    width: 510px;
+    margin: 0 auto;
   }
   .new-area .new-group {
     overflow-x: hidden;
   }
   .new-area .new-group .prd-list {
-    width: 550px;
+    width: 510px;
+    margin: 0 auto;
   }
   /* deal */
   .deal-area .deal-title {
