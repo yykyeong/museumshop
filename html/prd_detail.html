@@ -33,7 +33,7 @@
           <a href="/indexl.html" class="logo"><img src="/images/logo.png" alt=""></a>
           <div class="login-register-btn">
             <button class="btn-login">로그인</button>
-            <button class="btn-register">회원가입</button>
+            <button class="btn-register" onclick="location.href='/html/register.html'">회원가입</button>
           </div>
         </div>
 
@@ -56,7 +56,7 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
             </li>
-            <li class="cart-btn">
+            <li class="cart-btn" onclick="location.href='/html/orderlist.html'">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-cart2"
                 viewBox="0 0 16 16">
                 <path
@@ -484,8 +484,8 @@
               </div>
             </div>
             <div class="option-wrap option-action">
-              <button class="btn-common btn-cart">장바구니</button>
-              <button class="btn-common btn-buy">바로구매</button>
+              <button class="btn-common btn-cart" onclick="location.href='/html/orderlist.html'">장바구니</button>
+              <button class="btn-common btn-buy" onclick="location.href='/html/orderlist.html'">바로구매</button>
             </div>
           </div>
         </div>
@@ -551,22 +551,58 @@
 
   </div>
 
-  <!-- 공유하기 -->
-  <div class="share-area">
-    <h2>공유하기</h2>
-    <div class="share-list">
-      <div class="share-item">
-        <i class="bi bi-facebook"></i><span>페이스북</span>
+    <!-- 탑버튼 -->
+    <div class="topbtn">
+      <i class="bi bi-chevron-up"></i>
+    </div>
+  
+
+  <!-- 공유하기 모달 -->
+  <div class="share dimmed-layer hidden">
+    <div class="share-area">
+      <h2>공유하기</h2>
+      <div class="share-list">
+        <div class="share-item">
+          <i class="bi bi-facebook"></i><span>페이스북</span>
+        </div>
+        <div class="share-item">
+          <i class="bi bi-twitter"></i><span>트위터</span>
+        </div>
+        <div class="share-item">
+          <i class="bi bi-chat-fill"></i><span>카카오톡</span>
+        </div>
+        <div class="share-item share-link">
+          <i class="bi bi-link"></i><span>링크 복사</span>
+          <div class="copied-link">주소가 복사되었습니다</div>
+        </div>
       </div>
-      <div class="share-item">
-        <i class="bi bi-twitter"></i><span>트위터</span>
-      </div>
-      <div class="share-item">
-        <i class="bi bi-chat-fill"></i><span>카카오톡</span>
-      </div>
-      <div class="share-item share-link">
-        <i class="bi bi-link"></i><span>링크 복사</span>
-        <div class="copied-link">주소가 복사되었습니다</div>
+      <button class="btn-modal-close material-icons">clear</button>
+    </div>
+  </div>
+
+  <!-- 로그인 모달 -->
+  <div class="login dimmed-layer hidden">
+    <div class="login-modal-area">
+      <div class="login-modal">
+        <h1>국립중앙박물관 통합 로그인</h1>
+        <div class="register-field-group">
+          <div><input type="email" placeholder="이메일"></div>
+          <div>
+            <input type="password" placeholder="비밀번호" maxlength="12">
+            <i class="toggle-pw bi bi-eye-slash"></i>
+          </div>
+          <button class="btn-register">로그인</button>
+        </div>
+        <div class="login-group">
+          아직 회원이 아니신가요? <a href="#none" onclick="location.href='/html/register.html'">회원가입</a>
+          <span>
+            *회원가입을 하시면 국립박물관문화재단 홈페이지 및 뮤지엄샵을 동시에 이용하실 수 있습니다
+          </span>
+        </div>
+        
+        <button class="btn-modal-close material-icons">clear</button>
+      
+    
       </div>
     </div>
   </div>

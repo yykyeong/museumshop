@@ -33,7 +33,7 @@
           <a href="/indexl.html" class="logo"><img src="/images/logo.png" alt=""></a>
           <div class="login-register-btn">
             <button class="btn-login">로그인</button>
-            <button class="btn-register">회원가입</button>
+            <button class="btn-register" onclick="location.href='/html/register.html'">회원가입</button>
           </div>
         </div>
 
@@ -56,7 +56,7 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
             </li>
-            <li class="cart-btn">
+            <li class="cart-btn" onclick="location.href='/html/orderlist.html'">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-cart2"
                 viewBox="0 0 16 16">
                 <path
@@ -181,9 +181,10 @@
       </div>
     </header>
 
+
     <section class="register-area">
       <div class="register-content">
-        
+
         <div class="register-title-group">
           <h1 class="register-slogan">국립박물관문화재단 통합 회원가입</h1>
           <img src="/images/nmf-emblem.png" alt="nfm">
@@ -199,7 +200,8 @@
               </div>
               <div class="agreement-content">
                 제1장 총 칙
-                제 1조 (목적)본 약관은 국립박물관문화재단(이하"재단")에서 운영하는 웹사이트가 제공하는 모든 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 재단에서 운영하는 웹사이트의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다
+                제 1조 (목적)본 약관은 국립박물관문화재단(이하"재단")에서 운영하는 웹사이트가 제공하는 모든 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 재단에서 운영하는 웹사이트의 권리,
+                의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다
                 제 2조 (약관의 효력과 개정)
                 1. 본 약관은 재단에서 운영하는 웹사이트 화면 또는 지면에 게시하거나 기타의 방법으로 이용자에게 공지하고 회원이 동의함으로써 효력이 발생합니다.
               </div>
@@ -214,7 +216,8 @@
                 재단은 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.
                 위탁받는 자(수탁자) : (주)한국문화기술
                 위탁업무내용 : 재단이 운영하는 웹사이트의 극장 용 티켓예매
-                위탁이 필요한 사항이 발생 시 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 책임부담 등을 명확히 규정하고, 당해 계약내용을 서면 및 전자 보관하고 있습니다. 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보처리방침을 통하여 공개하도록 하겠습니다.
+                위탁이 필요한 사항이 발생 시 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 책임부담 등을 명확히 규정하고, 당해 계약내용을 서면 및 전자 보관하고 있습니다.
+                위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보처리방침을 통하여 공개하도록 하겠습니다.
               </div>
             </li>
             <li class="agreement-item">
@@ -252,26 +255,13 @@
         </div>
 
         <div class="login-group">
-          이미 가입된 계정이 있나요? <a href="#none">로그인 하기</a>
+          이미 가입된 계정이 있나요? <a href="#none" class="btn-login">로그인 하기</a>
         </div>
       </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- footer -->
-    <!-- <footer class="footer-area">
+    <footer class="footer-area">
       <div class="common-inner">
         <div class="lnb-group">
           <h1 class="title">국립박물관 문화상품</h1>
@@ -324,11 +314,35 @@
           </address>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
+  </div>
 
-
-
+  <!-- 로그인 모달 -->
+  <div class="login dimmed-layer hidden">
+    <div class="login-modal-area">
+      <div class="login-modal">
+        <h1>국립중앙박물관 통합 로그인</h1>
+        <div class="register-field-group">
+          <div><input type="email" placeholder="이메일"></div>
+          <div>
+            <input type="password" placeholder="비밀번호" maxlength="12">
+            <i class="toggle-pw bi bi-eye-slash"></i>
+          </div>
+          <button class="btn-register">로그인</button>
+        </div>
+        <div class="login-group">
+          아직 회원이 아니신가요? <a href="#none" onclick="location.href='/html/register.html'">회원가입</a>
+          <span>
+            *회원가입을 하시면 국립박물관문화재단 홈페이지 및 뮤지엄샵을 동시에 이용하실 수 있습니다
+          </span>
+        </div>
+        
+        <button class="btn-modal-close material-icons">clear</button>
+      
+    
+      </div>
+    </div>
   </div>
 
 

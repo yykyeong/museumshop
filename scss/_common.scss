@@ -40,6 +40,63 @@ section:not(.visual-area) {
   padding: 60px 0;
 }
 
+// dimmed-layer
+.dimmed-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s ease;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.topbtn {
+  border: 1px solid $border-color;
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  position: fixed;
+  bottom: 20px;
+  right: -100px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0, .1);
+  transition: .35s;
+  cursor: pointer;
+  &.is-active {
+    right: 20px;
+  }
+  &:after {
+    content: 'top';
+    text-transform: uppercase;
+    color: $font-color-main;
+    font-size: 10px;
+    display: block;
+    margin-top: -3px;
+  }
+  .bi {
+    color: $font-color-sub;
+  }
+}
+
+.btn-modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  font-size: 17px;
+}
+
+
 .common-inner {
   width: 1160px;
   position: relative;

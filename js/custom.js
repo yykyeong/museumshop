@@ -44,8 +44,12 @@ $(function () {
     }
   });
 
-
-  $('.prd_detail .header-area').addClass('is-active')
+  $('.btn-login').click(function(){
+    $('.login.dimmed-layer').removeClass('hidden')
+  })
+  $('.btn-modal-close').click(function(){
+    $('.dimmed-layer').addClass('hidden')
+  })
 
 
   /* category-list */
@@ -102,9 +106,21 @@ $(function () {
     $(this).toggleClass('is-active');
   })
 
-
   $('.copyright-group .title').click(function(){
     $('address').toggle();
+  })
+
+  /* 위로가기 */
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 400) {
+      $('.topbtn').addClass('is-active')
+    } else {
+      $('.topbtn').removeClass('is-active')
+    }
+  })
+
+  $('.topbtn').click(function(){
+    $('html, body').animate({scrollTop:0}, 500)
   })
 
   /* 제품 네비게이션 */
@@ -134,6 +150,14 @@ $(function () {
     $(this).children().css({
       'color': 'red'
     })
+  })
+
+  /* 공유하기 */
+  $('.share-btn').click(function(){
+    $('.share.dimmed-layer').removeClass('hidden')
+  })
+  $('.share-link').click(function(){
+    $('.copied-link').show().delay(700).fadeOut();
   })
 
   /* 약관동의 */
@@ -234,14 +258,6 @@ $(function () {
       }
     ]
   });
-
-
-
-
-
-
-
-
 
 
 

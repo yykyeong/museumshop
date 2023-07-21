@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>뮷즈</title>
+    <!--Open Graph-->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="museumshop" />
+    <meta property="og:title" content="MU:DS" />
+    <meta property="og:description" content="MU:DS renewal portfolio"/>
+    <meta property="og:image" content="/images/open-logo.png" />
+    <meta property="og:url" content="https://spectacular-llama-51535e.netlify.app" />
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -33,7 +40,7 @@
           <a href="/indexl.html" class="logo"><img src="/images/logo.png" alt=""></a>
           <div class="login-register-btn">
             <button class="btn-login">로그인</button>
-            <button class="btn-register">회원가입</button>
+            <button class="btn-register" onclick="location.href='/html/register.html'">회원가입</button>
           </div>
         </div>
 
@@ -56,7 +63,7 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
             </li>
-            <li class="cart-btn">
+            <li class="cart-btn" onclick="location.href='/html/orderlist.html'">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" class="bi bi-cart2"
                 viewBox="0 0 16 16">
                 <path
@@ -226,7 +233,7 @@
         </div>
         <div class="best-group">
           <div class="prd-list">
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd01.jpg" alt="신라의 미소 우산 겸 양산"></div>
               <div class="prd-info-area">
                 <p class="prd-category">우산/양산</p>
@@ -247,7 +254,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd02.jpg" alt="신라의 미소 파우치"></div>
               <div class="prd-info-area">
                 <p class="prd-category">가방/지갑/파우치</p>
@@ -268,7 +275,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item soldout">
+            <div class="prd-item soldout" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd03.jpg" alt="상형토기 미니 에코백"></div>
               <div class="prd-info-area">
                 <p class="prd-category">가방/지갑/파우치</p>
@@ -289,7 +296,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd04.jpg" alt=""></div>
               <div class="prd-info-area">
                 <p class="prd-category">미니어처</p>
@@ -316,6 +323,7 @@
       </div>
     </section>
 
+    <!-- new -->
     <section class="new-area">
       <div class="common-inner">
         <div class="title-group">
@@ -323,7 +331,7 @@
         </div>
         <div class="new-group">
           <div class="prd-list">
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd05.jpg" alt="롱롱타임플라워 초충도 에디션"></div>
               <div class="prd-info-area">
                 <p class="prd-category">장식소품</p>
@@ -344,7 +352,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd06.jpg" alt="전주장 종이필통"></div>
               <div class="prd-info-area">
                 <p class="prd-category">필기류/필통</p>
@@ -365,7 +373,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd07.jpg" alt="백자청화초화문편병 수첩"></div>
               <div class="prd-info-area">
                 <p class="prd-category">노트/수첩/메모</p>
@@ -386,7 +394,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd01.jpg" alt="신라의 미소 우산 겸 양산"></div>
               <div class="prd-info-area">
                 <p class="prd-category">우산/양산</p>
@@ -407,7 +415,7 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-            <div class="prd-item">
+            <div class="prd-item" onclick="location.href='/html/prd_detail.html'">
               <div class="prd-img-area"><img src="./images/prd02.jpg" alt="신라의 미소 파우치"></div>
               <div class="prd-info-area">
                 <p class="prd-category">가방/지갑/파우치</p>
@@ -433,6 +441,7 @@
       </div>
     </section>
 
+    <!-- deal -->
     <section class="deal-area">
       <div class="deal-title">
         <div class="common-inner">
@@ -549,6 +558,7 @@
       </div>
     </section>
 
+    <!-- exhibition -->
     <section class="exhibition-area">
       <div class="common-inner">
         <div class="title-group">
@@ -608,6 +618,7 @@
       </div>
     </section>
 
+    <!-- book -->
     <section class="book-area">
       <div class="common-inner">
         <h1 class="title">책으로 만나는 박물관</h1>
@@ -639,7 +650,6 @@
                 <span class="prd-badge md-badge">MD추천</span>
               </div>
             </div>
-
           </div>
           <div class="prd-item">
             <div class="prd-img-area">
@@ -712,6 +722,59 @@
           </div>
           <div class="prd-item">
             <div class="prd-img-area">
+              <img src="./images/book01.jpg" alt="그리스가 로마에게, 로마가 그리스에게">
+            </div>
+            <div class="book-info-area">
+              <div class="prd-info-area">
+                <p class="prd-name">그리스가 로마에게, 로마가 그리스에게</p>
+                <p class="prd-desc">국립중앙박물관 상설전시실품</p>
+              </div>
+              <div class="prd-price-area">
+                <span class="current-price">28,000<em>원</em></span>
+              </div>
+              <div class="prd-grade-area">
+                <span class="riview">리뷰 0</span>
+              </div>
+              <div class="prd-badge-area">
+                <span class="prd-badge new-badge">NEW</span>
+                <span class="prd-badge best-badge">BEST</span>
+                <span class="prd-badge md-badge">MD추천</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab3">
+          <div class="prd-item">
+            <div class="prd-img-area">
+              <img src="./images/book02.jpg" alt="국립중앙박물관 상설전시도록(영문)">
+            </div>
+          </div>
+          <div class="prd-item">
+            <div class="prd-img-area">
+              <img src="./images/book03.jpg" alt="국립중앙박물관 상설전시 도록(2021년 개정판)">
+            </div>
+            <div class="book-info-area">
+              <div class="prd-info-area">
+                <p class="prd-name">국립중앙박물관 상설전시 도록(2021년 개정판)</p>
+                <p class="prd-desc">국립중앙박물관 특화상품</p>
+              </div>
+              <div class="prd-price-area">
+                <span class="current-price">38,000<em>원</em></span>
+              </div>
+              <div class="prd-grade-area">
+                <span class="riview">리뷰 0</span>
+              </div>
+              <div class="prd-badge-area">
+                <span class="prd-badge new-badge">NEW</span>
+                <span class="prd-badge best-badge">BEST</span>
+                <span class="prd-badge md-badge">MD추천</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab4">
+          <div class="prd-item">
+            <div class="prd-img-area">
               <img src="./images/book03.jpg" alt="국립중앙박물관 상설전시 도록(2021년 개정판)">
             </div>
             <div class="book-info-area">
@@ -737,6 +800,7 @@
       </div>
     </section>
 
+    <!-- channel -->
     <section class="channel-area">
       <div class="common-inner">
         <div class="nfm-group">
@@ -813,8 +877,41 @@
       </div>
     </footer>
 
-
   </div>
+
+
+  <!-- 탑버튼 -->
+  <div class="topbtn">
+    <i class="bi bi-chevron-up"></i>
+  </div>
+
+
+    <!-- 로그인 모달 -->
+    <div class="login dimmed-layer hidden">
+      <div class="login-modal-area">
+        <div class="login-modal">
+          <h1>국립중앙박물관 통합 로그인</h1>
+          <div class="register-field-group">
+            <div><input type="email" placeholder="이메일"></div>
+            <div>
+              <input type="password" placeholder="비밀번호" maxlength="12">
+              <i class="toggle-pw bi bi-eye-slash"></i>
+            </div>
+            <button class="btn-register">로그인</button>
+          </div>
+          <div class="login-group">
+            아직 회원이 아니신가요? <a href="#none" onclick="location.href='/html/register.html'">회원가입</a>
+            <span>
+              *회원가입을 하시면 국립박물관문화재단 홈페이지 및 뮤지엄샵을 동시에 이용하실 수 있습니다
+            </span>
+          </div>
+          
+          <button class="btn-modal-close material-icons">clear</button>
+        
+      
+        </div>
+      </div>
+    </div>
 
 </body>
 
