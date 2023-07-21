@@ -41,6 +41,10 @@ section:not(.visual-area) {
   padding: 60px 0;
 }
 
+body.fixed {
+  overflow: hidden;
+}
+
 .dimmed-layer {
   position: fixed;
   top: 0;

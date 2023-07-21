@@ -44,11 +44,23 @@ $(function () {
     }
   });
 
+
+  
+  function stopScroll() {
+    $('body').addClass('fixed');
+  }
+  function playScroll() {
+    $('body').removeClass('fixed');
+  }
+
+
   $('.btn-login').click(function(){
     $('.login.dimmed-layer').removeClass('hidden')
+    stopScroll()
   })
   $('.btn-modal-close').click(function(){
     $('.dimmed-layer').addClass('hidden')
+    playScroll()
   })
 
 
@@ -155,9 +167,11 @@ $(function () {
   /* 공유하기 */
   $('.share-btn').click(function(){
     $('.share.dimmed-layer').removeClass('hidden')
+    stopScroll()
   })
   $('.share-link').click(function(){
     $('.copied-link').show().delay(700).fadeOut();
+    playScroll()
   })
 
   /* 약관동의 */
