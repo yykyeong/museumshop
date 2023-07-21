@@ -2239,11 +2239,12 @@ section:not(.visual-area) {
     display: block;
     position: absolute;
     cursor: pointer;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
     font-size: 1.3em;
     background-color: transparent;
     border: none;
+    padding: 15px;
   }
   .visual-area .visual-list .visual-item .visual-img .phidden {
     display: none;
@@ -2519,6 +2520,7 @@ section:not(.visual-area) {
     gap: 0;
     padding: 15px;
     background-color: #fff;
+    flex-direction: column;
   }
   .orderlist-area .cart-area .cart-item {
     padding-top: 20px;
