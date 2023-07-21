@@ -152,6 +152,17 @@ $(function () {
     }
   })
 
+  /* 장바구니 */
+  $('.chkAll-group .btn-clearAll').click(function(){
+    $('.cart-item').hide()
+  })
+  $('.cart-item .btn-clear').click(function(){
+    $(this).parent().hide(100)
+  })
+  $('.chkALl').click(function(){
+    $('.chk-status .chk').prop('checked', this.checked)
+  })
+
   /* visual */
   $('.visual-list').slick({
     infinite: true,
