@@ -2,48 +2,61 @@ $(function () {
 
 
   /* header */
-  const headerArea = $('.header-area');
-  const indexHeaderArea = $('.index .header-area');
-  const categoryMenuArea = $('.category-menu-area');
-  const triggerBtn = $('.btn-trigger');
+  const headerArea = $('.header-area')
+  const indexHeaderArea = $('.index .header-area')
+  const categoryMenuArea = $('.category-menu-area')
+  const triggerBtn = $('.btn-trigger')
+  const screenWidthThreshold = 767
+  
+  function handleTriggerClick() {
+    triggerBtn.toggleClass('is-active')
+    headerArea.toggleClass('is-active')
+    if (categoryMenuArea.hasClass('is-active')) {
+      categoryMenuArea.stop().slideUp(300).removeClass('is-active')
 
-
-  $(window).resize(function () {
-    if ($(window).innerWidth() > 767) {
-      triggerBtn.click(function () {
-        $(this).toggleClass('is-active');
-        headerArea.addClass('is-active');
-        categoryMenuArea.stop().slideToggle(300).toggleClass('is-active');
-      })
-      $('section').click(function(){
-        triggerBtn.removeClass('is-active')
-        categoryMenuArea.stop().slideUp(300);
-      });
-    } 
-    else if ($(window).innerWidth() < 767) {
-      triggerBtn.click(function () {
-        categoryMenuArea.animate({
-          'left': 0
-        }, 300);
-      })
-      $('section, .btn-category-menu-close').click(function () {
-        categoryMenuArea.animate({
-          'left': -300
-        }, 300);
-      })
-    }
-  }).resize();
-
-
-  $(window).scroll(function() {
-    const scrollTop = $(window).scrollTop();
-    if (scrollTop > 180) {
-      indexHeaderArea.addClass('is-active');
     } else {
-      indexHeaderArea.removeClass('is-active');
+      categoryMenuArea.stop().slideDown(300).addClass('is-active')
+    }
+  }
+  
+  function handleScreenResize() {
+    if ($(window).innerWidth() > screenWidthThreshold) {
+      triggerBtn.off('click', handleTriggerClick)
+      $('section').off('click', closeMenu)
+      triggerBtn.on('click', handleTriggerClick)
+      $('section').on('click', closeMenu)
+    } else {
+      triggerBtn.off('click', handleTriggerClick)
+      $('section').off('click', closeMenu)
+      triggerBtn.on('click', openMenu)
+      $('section, .btn-category-menu-close').on('click', closeMenu)
+    }
+  }
+  
+  function openMenu() {
+    categoryMenuArea.animate({
+      'left': 0
+    }, 300)
+  }
+  
+  function closeMenu() {
+    categoryMenuArea.animate({
+      'left': -300
+    }, 300)
+  }
+  
+  $(window).resize(handleScreenResize);
+  
+  $(window).scroll(function() {
+    const scrollTop = $(window).scrollTop()
+    if (scrollTop > 180 || categoryMenuArea.hasClass('is-active')){
+      indexHeaderArea.addClass('is-active')
+    } else {
+      indexHeaderArea.removeClass('is-active')
     }
   });
-
+  
+  handleScreenResize();
 
   
   function stopScroll() {
@@ -65,7 +78,7 @@ $(function () {
 
 
   /* category-list */
-  $('.category-item  b').click(function () {
+  $('.category-item b').click(function () {
     $('.detail-list').slideUp(200);
     $(this).next().stop().slideDown(200);
     $(this).addClass('is-active');
@@ -75,21 +88,21 @@ $(function () {
 
 
   /* search */
-  const searchEl = $('.search-btn');
-  const searchInputEl = searchEl.find('input');
+  const searchEl = $('.search-btn')
+  const searchInputEl = searchEl.find('input')
 
   searchEl.click(function () {
-    $(this).addClass('is-active');
-    searchInputEl.focus();
+    $(this).addClass('is-active')
+    searchInputEl.focus()
   })
 
   $(searchInputEl).on('focus', function () {
-    searchInputEl.attr('placeholder', '통합검색');
+    searchInputEl.attr('placeholder', '통합검색')
   });
 
   $(searchInputEl).on('blur', function () {
-    searchEl.removeClass('is-active');
-    searchInputEl.attr('placeholder', '');
+    searchEl.removeClass('is-active')
+    searchInputEl.attr('placeholder', '')
   });
 
 
@@ -115,7 +128,7 @@ $(function () {
   /* footer */
   $('.lnb-item-title').click(function(){
     $(this).next().stop().slideToggle(200);
-    $(this).toggleClass('is-active');
+    $(this).toggleClass('is-active')
   })
 
   $('.copyright-group .title').click(function(){
@@ -145,7 +158,7 @@ $(function () {
       scrollTop: $(linkLocation).offset().top - offsetValue
     }, 700)
 
-    e.preventDefault();
+    e.preventDefault()
   })
 
 
@@ -167,6 +180,7 @@ $(function () {
   /* 공유하기 */
   $('.share-btn').click(function(){
     $('.share.dimmed-layer').removeClass('hidden')
+    stopScroll()
     stopScroll()
   })
   $('.share-link').click(function(){
