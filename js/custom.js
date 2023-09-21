@@ -2,7 +2,6 @@ $(function () {
 
 
   /* header */
-  const headerArea = $('.header-area')
   const indexHeaderArea = $('.index .header-area')
   const categoryMenuArea = $('.category-menu-area')
   const triggerBtn = $('.btn-trigger')
@@ -13,7 +12,7 @@ $(function () {
     
     if (categoryMenuArea.hasClass('is-active')) {
       categoryMenuArea.stop().slideUp(300).removeClass('is-active')
-      indexHeaderArea.removeClass('is-active') 
+      indexHeaderArea.removeClass('is-active')
 
     } else {
       categoryMenuArea.stop().slideDown(300).addClass('is-active')
@@ -24,9 +23,11 @@ $(function () {
   function handleScreenResize() {
     if ($(window).innerWidth() > mobileWidth) {
       triggerBtn.off('click', handleTriggerClick)
-      $('section').off('click', closeMenu)
       triggerBtn.on('click', handleTriggerClick)
-      $('section').on('click', closeMenu)
+      $('section,.category-menu-area').on('click', function () {
+        categoryMenuArea.stop().slideUp(300).removeClass('is-active');
+      })
+
     } else {
       triggerBtn.off('click', handleTriggerClick)
       $('section').off('click', closeMenu)
@@ -34,6 +35,9 @@ $(function () {
       $('section, .btn-category-menu-close').on('click', closeMenu)
     }
   }
+
+
+  
   
   function openMenu() {
     categoryMenuArea.animate({
@@ -51,6 +55,7 @@ $(function () {
   
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop()
+
     if (scrollTop > 180 || categoryMenuArea.hasClass('is-active')){
       indexHeaderArea.addClass('is-active')
     } else {
