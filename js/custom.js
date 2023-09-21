@@ -6,21 +6,23 @@ $(function () {
   const indexHeaderArea = $('.index .header-area')
   const categoryMenuArea = $('.category-menu-area')
   const triggerBtn = $('.btn-trigger')
-  const screenWidthThreshold = 767
+  const mobileWidth = 767
   
   function handleTriggerClick() {
     triggerBtn.toggleClass('is-active')
-    headerArea.toggleClass('is-active')
+    
     if (categoryMenuArea.hasClass('is-active')) {
       categoryMenuArea.stop().slideUp(300).removeClass('is-active')
+      indexHeaderArea.removeClass('is-active') 
 
     } else {
       categoryMenuArea.stop().slideDown(300).addClass('is-active')
+      indexHeaderArea.addClass('is-active')
     }
   }
   
   function handleScreenResize() {
-    if ($(window).innerWidth() > screenWidthThreshold) {
+    if ($(window).innerWidth() > mobileWidth) {
       triggerBtn.off('click', handleTriggerClick)
       $('section').off('click', closeMenu)
       triggerBtn.on('click', handleTriggerClick)
@@ -45,7 +47,7 @@ $(function () {
     }, 300)
   }
   
-  $(window).resize(handleScreenResize);
+  $(window).resize(handleScreenResize)
   
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop()
@@ -54,16 +56,17 @@ $(function () {
     } else {
       indexHeaderArea.removeClass('is-active')
     }
-  });
-  
-  handleScreenResize();
+  })
+
+
+  handleScreenResize()
 
   
   function stopScroll() {
-    $('body').addClass('fixed');
+    $('body').addClass('fixed')
   }
   function playScroll() {
-    $('body').removeClass('fixed');
+    $('body').removeClass('fixed')
   }
 
 
@@ -79,10 +82,10 @@ $(function () {
 
   /* category-list */
   $('.category-item b').click(function () {
-    $('.detail-list').slideUp(200);
-    $(this).next().stop().slideDown(200);
-    $(this).addClass('is-active');
-    $(this).parent().siblings().children('b').removeClass('is-active');
+    $('.detail-list').slideUp(200)
+    $(this).next().stop().slideDown(200)
+    $(this).addClass('is-active')
+    $(this).parent().siblings().children('b').removeClass('is-active')
   })
 
 
@@ -98,12 +101,12 @@ $(function () {
 
   $(searchInputEl).on('focus', function () {
     searchInputEl.attr('placeholder', '통합검색')
-  });
+  })
 
   $(searchInputEl).on('blur', function () {
     searchEl.removeClass('is-active')
     searchInputEl.attr('placeholder', '')
-  });
+  })
 
 
 
@@ -117,7 +120,7 @@ $(function () {
 
   /* book_tab */
   $('.tab-list li').click(function () {
-    $(this).addClass('is-active');
+    $(this).addClass('is-active')
     $(this).siblings().removeClass('is-active')
 
     let tab = $(this).attr('data-tab')
@@ -127,12 +130,12 @@ $(function () {
 
   /* footer */
   $('.lnb-item-title').click(function(){
-    $(this).next().stop().slideToggle(200);
+    $(this).next().stop().slideToggle(200)
     $(this).toggleClass('is-active')
   })
 
   $('.copyright-group .title').click(function(){
-    $('address').toggle();
+    $('address').toggle()
   })
 
   /* 위로가기 */
@@ -150,9 +153,9 @@ $(function () {
 
   /* 제품 네비게이션 */
   $('.prd-info-navigation a').click(function(e){
-    $(this).addClass('is-active').parent('li').siblings().find('a').removeClass('is-active');
+    $(this).addClass('is-active').parent('li').siblings().find('a').removeClass('is-active')
     
-    let linkLocation = $(this).attr('href');
+    let linkLocation = $(this).attr('href')
     let offsetValue = 200
     $('html, body').animate({
       scrollTop: $(linkLocation).offset().top - offsetValue
@@ -184,7 +187,7 @@ $(function () {
     stopScroll()
   })
   $('.share-link').click(function(){
-    $('.copied-link').show().delay(700).fadeOut();
+    $('.copied-link').show().delay(700).fadeOut()
     playScroll()
   })
 
@@ -195,12 +198,12 @@ $(function () {
 
   /* 회원가입_비밀번호 */
   $('.toggle-pw').click(function(){
-    $(this).toggleClass('bi-eye');
-    const inputType =$(this).parent().children('input').attr('type');
+    $(this).toggleClass('bi-eye')
+    const inputType =$(this).parent().children('input').attr('type')
     if(inputType == 'password') {
-      $(this).parent().children('input').attr('type','text');
+      $(this).parent().children('input').attr('type','text')
     } else {
-      $(this).parent().children('input').attr('type','password');
+      $(this).parent().children('input').attr('type','password')
     }
   })
 
@@ -225,7 +228,7 @@ $(function () {
     fade: false,
     speed: 300,
     pauseOnHover: true
-  });
+  })
 
   /* best */
   $('.best-group .prd-list').slick({
@@ -255,7 +258,7 @@ $(function () {
         }
       }
     ]
-  });
+  })
 
   /* new */
   $('.new-group .prd-list').slick({
@@ -285,7 +288,7 @@ $(function () {
         }
       }
     ]
-  });
+  })
 
 
 
