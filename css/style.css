@@ -62,35 +62,6 @@ body.fixed {
   visibility: hidden;
 }
 
-.topbtn {
-  border: 1px solid #DFDFDF;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: 0.35s;
-  cursor: pointer;
-}
-.topbtn.is-active {
-  right: 20px;
-}
-.topbtn:after {
-  content: "top";
-  text-transform: uppercase;
-  color: #333;
-  font-size: 10px;
-  display: block;
-  margin-top: -3px;
-}
-.topbtn .bi {
-  color: #666;
-}
-
 .btn-modal-close {
   position: absolute;
   right: 0;
@@ -227,6 +198,35 @@ body.fixed {
 }
 .footer-area .copyright-group address {
   font-style: normal;
+}
+
+.topbtn {
+  border: 1px solid #DFDFDF;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: -100px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.35s;
+  cursor: pointer;
+}
+.topbtn.is-active {
+  right: 20px;
+}
+.topbtn:after {
+  content: "top";
+  text-transform: uppercase;
+  color: #333;
+  font-size: 10px;
+  display: block;
+  margin-top: -3px;
+}
+.topbtn .bi {
+  color: #666;
 }
 
 .header-area {
@@ -749,6 +749,23 @@ body.fixed {
   background: #e8e8e8;
   color: #333;
   font-size: 2em;
+}
+
+.login-modal {
+  width: 360px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 10px;
+}
+.login-modal h1 {
+  text-align: center;
+  color: #275236;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .visual-area .visual-list .visual-item {
@@ -1944,23 +1961,6 @@ body.fixed {
   word-break: keep-all;
   color: #679963;
   margin-top: 3px;
-}
-
-.login-modal {
-  width: 360px;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  border-radius: 10px;
-}
-.login-modal h1 {
-  text-align: center;
-  color: #275236;
-  font-weight: 500;
-  font-size: 18px;
 }
 
 @media (max-width: 1024px) {

@@ -63,34 +63,7 @@ overflow: hidden;
   }
 }
 
-.topbtn {
-  border: 1px solid $border-color;
-  width: 40px;
-  height: 40px;
-  background-color: $white;
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0, .1);
-  transition: .35s;
-  cursor: pointer;
-  &.is-active {
-    right: 20px;
-  }
-  &:after {
-    content: 'top';
-    text-transform: uppercase;
-    color: $font-color-main;
-    font-size: 10px;
-    display: block;
-    margin-top: -3px;
-  }
-  .bi {
-    color: $font-color-sub;
-  }
-}
+
 
 .btn-modal-close {
   position: absolute;
